@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calculator-app"
+version = "0.1.0"
+description = "A Python Tkinter calculator with selectable themes."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.4",
+    "hypothesis==6.122.3",
+]
+
+[tool.setuptools]
+packages = ["calculator"]
+
+[tool.pytest.ini_options]
+# Discover both pure-logic tests and GUI tests under tests/.
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-ra"
+# Markers let GUI tests be selected or skipped (e.g. in headless CI:
+#   pytest -m "not gui"  to run only pure-logic tests).
+markers = [
+    "gui: tests that construct Tkinter widgets and require a display server",
+]
