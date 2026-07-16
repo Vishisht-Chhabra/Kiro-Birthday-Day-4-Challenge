@@ -3,6 +3,12 @@
 A functional desktop calculator built in Python with a Tkinter GUI and three
 selectable visual themes: **Classic**, **Dark (Kiro)**, and **Fun**.
 
+## Demo Video
+
+A short demo showing the app working:
+[`Kiro-Birthday-Challenge-Day-4.mov`](./Kiro-Birthday-Challenge-Day-4.mov)
+(click **View raw** / **Download** on GitHub to play it).
+
 ## 1. Description
 
 Calculator App is a standard arithmetic calculator you operate through on-screen
